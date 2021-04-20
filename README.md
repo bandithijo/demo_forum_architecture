@@ -1,24 +1,25 @@
-# README
+# Demo Forum Architecture
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Model (Database Structure)
 
-Things you may want to cover:
+1. User - Devise
+   * email:string
+   * password:string
 
-* Ruby version
+   has_many :forum_threads
+   has_many :forum_posts
 
-* System dependencies
+2. ForumThread
+   * user_id:integer
+   * subject:string
 
-* Configuration
+   belongs_to :user
+   has_many :forum_posts
 
-* Database creation
+3. ForumPost
+   * forum_thread_id:integer
+   * user_id:integer
+   * body:text
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+   belongs_to :forum_thread
+   belongs_to :user
