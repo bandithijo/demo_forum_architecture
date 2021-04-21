@@ -18,5 +18,8 @@ module DemoForumArchitecture
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Configure backend for Active Job to use Sucker Punch
+    config.active_job.queue_adapter = :sucker_punch
   end
 end
