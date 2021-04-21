@@ -2,8 +2,20 @@
 
 <h2><%= @forum_thread.subject %></h2>
 <p>Created by <%= @forum_thread.user.email %></p>
-<hr>
-<% @forum_thread.forum_posts.each do |f| %>
-  <p>Posted by <%= f.user.email %></p>
-  <p><%= f.body %></p>
+
+<% @forum_thread.forum_posts.each do |forum_post| %>
+  <%= render "forum_posts", forum_post: forum_post %>
+<% end %>
+
+
+<% if user_signed_in? %>
+  <%= form_for [@forum_thread, @forum_post] do |f| %>
+    <div class="form-group">
+      <%= f.text_area :body, placeholder: "Add a comment", rows: 10, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit %>
+    </div>
+  <% end %>
 <% end %>

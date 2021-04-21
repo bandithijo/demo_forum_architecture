@@ -1,3 +1,13 @@
 <h1>ForumThreads#index</h1>
 
 <%= link_to "New threads +", new_forum_thread_path %>
+
+<hr>
+
+<div>
+  <% @forum_threads.each do |f| %>
+    <%= link_to forum_thread_path(f) do %>
+      <%= f.subject %>
+    <% end %>
+  <% end %>
+</div>
