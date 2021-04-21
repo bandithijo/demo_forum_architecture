@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'sucker_punch', '~> 3.0', '>= 3.0.1'
+gem 'ransack', '~> 2.4', '>= 2.4.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

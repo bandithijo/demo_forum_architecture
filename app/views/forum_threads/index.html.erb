@@ -4,10 +4,16 @@
 
 <hr>
 
+<%= search_form_for @q, html: { class: "form-inline" } do |f| %>
+  <%= f.search_field :subject_or_forum_posts_body_cont, class: "form-control", placeholder: "Search..." %>
+<% end %>
+
+<hr>
+
 <div>
   <% @forum_threads.each do |f| %>
     <%= link_to forum_thread_path(f) do %>
-      <%= f.subject %>
+      <%= f.subject %><br>
     <% end %>
   <% end %>
 </div>
