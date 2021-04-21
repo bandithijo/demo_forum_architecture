@@ -8,6 +8,7 @@ class ForumThreadsController < ApplicationController
   end
 
   def show
+    @forum_posts = ForumPost.includes(:user).where(forum_thread: @forum_thread)
     @forum_post = ForumPost.new
   end
 
