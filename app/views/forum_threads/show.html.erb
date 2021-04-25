@@ -1,7 +1,7 @@
 <h1>ForumThreads#show</h1>
 
 <h2><%= @forum_thread.subject %></h2>
-<p>Created by <%= @forum_thread.user.email %></p>
+<p>Created by <%= @forum_thread.user.email %> <%= local_time_ago @forum_thread.created_at %></p>
 
 <% @forum_posts.each do |forum_post| %>
   <%= render "forum_posts", forum_post: forum_post %>

@@ -11,3 +11,8 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// local_time
+// install with: $ yarn add local-time
+import LocalTime from "local-time"
+LocalTime.start()
