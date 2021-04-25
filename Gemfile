@@ -29,6 +29,12 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'sucker_punch', '~> 3.0', '>= 3.0.1'
 gem 'ransack', '~> 2.4', '>= 2.4.2'
 gem 'local_time', '~> 2.1'
+gem 'html-pipeline', '~> 2.14'
+gem 'rouge', '~> 3.26'
+gem 'commonmarker', '~> 0.21.2'
+gem 'sanitize', '~> 5.2', '>= 5.2.3'
+gem 'github-markdown', '~> 0.6.9'
+gem 'gemoji', '~> 3.0', '>= 3.0.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
